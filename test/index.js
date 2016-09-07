@@ -1,9 +1,9 @@
 var assert = require('assert');
-var oslobysykkel = require('../index');
+var ruter = require('../index');
 
-describe('getStations', function() {
+describe('api', function() {
   it('well played', function(done) {
-    oslobysykkel.getStations(function(result) {
+    ruter.api("Heartbeat/Index", {}, function(result) {
       if (result && result !== undefined) {
         if (result.result !== undefined && result.error == 0) {
           done();
@@ -13,14 +13,3 @@ describe('getStations', function() {
   });
 });
 
-describe('getAvailability', function() {
-  it('well played', function(done) {
-    oslobysykkel.getAvailability(function(result) {
-      if (result && result !== undefined) {
-        if (result.result !== undefined && result.error == 0) {
-          done();
-        }
-      }
-    });
-  });
-});

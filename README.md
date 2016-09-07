@@ -1,65 +1,40 @@
-[![npm version](https://badge.fury.io/js/oslobysykkel.svg)](https://badge.fury.io/js/oslobysykkel)
-[![Downloads](https://img.shields.io/npm/dm/oslobysykkel.svg)](https://npmjs.com/oslobysykkel)
-[![Dependency Status](https://david-dm.org/willosof/oslobysykkel.svg)](https://david-dm.org/willosof/oslobysykkel)
-[![Build Status](https://travis-ci.org/willosof/oslobysykkel.svg?branch=master)](https://travis-ci.org/willosof/oslobysykkel)
+[![npm version](https://badge.fury.io/js/ruter-api.svg)](https://badge.fury.io/js/ruter-api)
+[![Downloads](https://img.shields.io/npm/dm/ruter-api.svg)](https://npmjs.com/ruter-api)
+[![Dependency Status](https://david-dm.org/willosof/ruter-api.svg)](https://david-dm.org/willosof/ruter-api)
+[![Build Status](https://travis-ci.org/willosof/ruter-api.svg?branch=master)](https://travis-ci.org/willosof/ruter-api)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/willosof/oslobysykkel.svg?style=plastic)](https://github.com/willosof/oslobysykkel/issues)
-[![GitHub forks](https://img.shields.io/github/forks/willosof/oslobysykkel.svg?style=plastic)](https://github.com/willosof/oslobysykkel/network)
-[![GitHub stars](https://img.shields.io/github/stars/willosof/oslobysykkel.svg?style=plastic)](https://github.com/willosof/oslobysykkel/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/willosof/node-ruter.svg?style=plastic)](https://github.com/willosof/node-ruter/issues)
+[![GitHub forks](https://img.shields.io/github/forks/willosof/node-ruter.svg?style=plastic)](https://github.com/willosof/node-ruter/network)
+[![GitHub stars](https://img.shields.io/github/stars/willosof/node-ruter.svg?style=plastic)](https://github.com/willosof/node-ruter/stargazers)
 
 ## Features
-* **getStations(result_cb)**
-List all stations in the system. Here you'll get the id's you need to make sense of getAvailability() and getAvailabilityByStationId()
-
-* **getAvailability(result_cb)**
-Get availability information on all stations in the oslobysykkel system.
-
-* **getAvailabilityByStationId(id, result_cb)**
-Using the id you find in getAvailability(), you can narrow your request down using this function.
-*Notice: for now this function is just a client side processed version of getAvailability()*
-
+* **api(apipath, options, result_cb)**
 
 ### Getting Started
 
 In Node.js:
 
 ```
-npm install oslobysykkel
+npm install ruter-api
 ```
 
 ```javascript
-var oslobysykkel = require('oslobysykkel');
+var ruter = require('ruter-api');
 
 // Get all stations and their IDs
-oslobysykkel.getStations(response => {
+ruter.api("Heartbeat/Index", {}, response => {
 	console.log(response);
 });
 
-// Get current availability data
-oslobysykkel.getAvailability(response => {
-	console.log(response);
-});
-
-// Get availability data for one specific station
-var stationId = 26;
-oslobysykkel.getAvailabilityByStationId(stationId, response => {
-	console.log(response);
-});
 
 ```
 
 ### Git
-* [https://github.com/willosof/oslobysykkel](https://github.com/willosof/oslobysykkel)
-* `git@github.com:willosof/oslobysykkel.git`
-
+* [https://github.com/willosof/node-ruter](https://github.com/willosof/node-ruter)
+* `git@github.com:willosof/node-ruter.git`
 
 ### Data Sources
-* https://oslobysykkel.no/api/v1/stations/availability
-* https://oslobysykkel.no/api/v1/stations
-
-### Other
-#### A link that shows where new stations will appear:
-* https://oslobysykkel.no/api/internal/stations (ready=false is the coming ones)
+* http://reisapi.ruter.no/help
 
 ### Author
 William Viker <<william.viker@gmail.com>>

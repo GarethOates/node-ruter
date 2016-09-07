@@ -10,8 +10,8 @@ var got = require("got");
 
 var v1 = function(options) {}
 
-var getAvailability = function(cb) {
-	got("https://oslobysykkel.no/api/v1/stations/availability", { json: true })
+var api = function(path, info, cb) {
+	got("http://reisapi.ruter.no/" + path, { json: true })
 		.then(response => {
 			cb({ error: 0, result: response.body });
 		})
@@ -20,33 +20,6 @@ var getAvailability = function(cb) {
 		})
 }
 
-var getAvailabilityByStationId = function(id, idcb) {
-	getAvailability(function(avres) {
-		if (avres.error == 0) {
-			for (var idx in avres.result.stations) {
-				if (avres.result.stations[idx].id == id) {
-					idcb(avres.result.stations[idx]);
-					return;
-				}
-			}
-		}
-	})
-}
-
-var getStations = function(cb) {
-	got("https://oslobysykkel.no/api/v1/stations", { json: true })
-		.then(response => {
-			cb({ error: 0, result: response.body });
-		})
-		.catch(error => {
-			cb({ error: 1, errstr: error.response.body });
-		})
-}
-
-var oslobysykkel = v1;
-
-oslobysykkel.getAvailability = getAvailability;
-oslobysykkel.getAvailabilityByStationId = getAvailabilityByStationId;
-oslobysykkel.getStations = getStations;
-
-module.exports = oslobysykkel;
+var ruter = v1;
+ruter.api = api;
+module.exports = ruter;

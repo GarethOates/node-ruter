@@ -1,17 +1,19 @@
 {
-  "name": "oslobysykkel",
-  "version": "1.2.6",
-  "description": "Unofficial API for the latest city bike system in Oslo, Norway",
+  "name": "ruter-api",
+  "version": "1.0.1",
+  "description": "Unofficial API for Ruter# REIS API (public transportation service in and around Oslo, Norway)",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "start": "node index.js"
   },
   "keywords": [
-    "citybike",
-    "bysykkel",
+    "ruter",
+    "reisapi",
     "oslo",
-    "oslobysykkel",
+    "transportation",
+    "bus",
+    "tram",
     "api"
   ],
   "author": "William Viker <william.viker@gmail.com>",
@@ -25,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willosof/oslobysykkel.git"
+    "url": "git+https://github.com/willosof/node-ruter.git"
   },
   "bugs": {
-    "url": "https://github.com/willosof/oslobysykkel/issues"
+    "url": "https://github.com/willosof/node-ruter/issues"
   },
-  "homepage": "https://github.com/willosof/oslobysykkel#readme"
+  "homepage": "https://github.com/willosof/node-ruter#readme"
 }
