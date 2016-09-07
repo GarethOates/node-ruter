@@ -33,7 +33,7 @@ ruter.api("Heartbeat/Index", {}, response => {
 * [https://github.com/willosof/node-ruter](https://github.com/willosof/node-ruter)
 * `git@github.com:willosof/node-ruter.git`
 
-### Data Sources
+### Data Sources / Public Documentation
 * http://reisapi.ruter.no/help
 
 ### Author
