@@ -26,6 +26,15 @@ ruter.api("Heartbeat/Index", {}, response => {
 	console.log(response);
 });
 
+// Get all stops within the ruter zone
+ruter.api("Place/GetStopsRuter", {}, response => {
+	console.log(response);
+});
+
+// Get all lines. Their name, type and respective color,
+ruter.api("Line/GetLines", {}, response => {
+    console.log(response);
+});
 
 ```
 # API (as of Sept 9 2016)

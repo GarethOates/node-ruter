@@ -4,4 +4,3 @@ var ruter = require('./index');
 ruter.api("Line/GetLines", {}, response => {
     console.log(response);
 });
-
