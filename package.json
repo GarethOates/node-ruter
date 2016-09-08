@@ -1,6 +1,6 @@
 {
   "name": "ruter-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unofficial API for Ruter# REIS API (public transportation service in and around Oslo, Norway)",
   "main": "index.js",
   "scripts": {
