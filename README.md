@@ -7,7 +7,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/willosof/node-ruter.svg?style=plastic)](https://github.com/willosof/node-ruter/network)
 [![GitHub stars](https://img.shields.io/github/stars/willosof/node-ruter.svg?style=plastic)](https://github.com/willosof/node-ruter/stargazers)
 
-## Features
+## Functions
 * **api(apipath, options, result_cb)**
 
 ### Getting Started
@@ -21,7 +21,7 @@ npm install ruter-api
 ```javascript
 var ruter = require('ruter-api');
 
-// Get all stations and their IDs
+// Returns "Pong". Check API server availability
 ruter.api("Heartbeat/Index", {}, response => {
 	console.log(response);
 });
@@ -128,6 +128,9 @@ Returns a list of lines that Ruter operates, including stops for each line. Whet
 
 * **Line/GetLinesRuter?ruterOperatedOnly={ruterOperatedOnly}**
 Returns a list of lines that Ruter operates.
+
+## Read more
+Read more about the API-calls and the values you get in return at Ruters official [API specification](http://reisapi.ruter.no/help)
 
 ## Git
 * [https://github.com/willosof/node-ruter](https://github.com/willosof/node-ruter)
